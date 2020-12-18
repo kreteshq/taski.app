@@ -1,0 +1,109 @@
+{
+  "files.exclude": {
+    "dist": false
+  },
+  "search.exclude": {
+    "dist": true
+  },
+  "typescript.tsc.autoDetect": "off",
+  "terminal.integrated.fontSize": 20,
+  "workbench.colorCustomizations": {
+    "terminal.background":"#282C34",
+    "terminal.foreground":"#abb2bf",
+    "terminalCursor.background":"#9EA7A6",
+    "terminalCursor.foreground":"#9EA7A6",
+    "terminal.ansiBlack":"#232C31",
+    "terminal.ansiBlue":"#10b1fe",
+    "terminal.ansiBrightBlack":"#636d83",
+    "terminal.ansiBrightBlue":"#3691ff",
+    "terminal.ansiBrightCyan":"#1abc9c",
+    "terminal.ansiBrightGreen":"#2ecc71",
+    "terminal.ansiBrightMagenta":"#ff78f8",
+    "terminal.ansiBrightRed":"#ff6480",
+    "terminal.ansiBrightWhite":"#EDEDED",
+    "terminal.ansiBrightYellow":"#f9c859",
+    "terminal.ansiCyan":"#16a085",
+    "terminal.ansiGreen":"#3fc56b",
+    "terminal.ansiMagenta":"#9f7efe",
+    "terminal.ansiRed":"#e74c3c",
+    "terminal.ansiWhite":"#ecf0f1",
+    "terminal.ansiYellow":"#f1c40f"
+  },
+  "files.associations": {
+    "default.json": "jsonc"
+  },
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/config/default.json"
+      ],
+      "schema": {
+        "additionalProperties": false,
+        "type": "object",
+        "properties": {
+          "db": {
+            "additionalProperties": false,
+            "type": "object",
+            "description": "The name of the entry",
+            "properties": {
+              "database": {
+                "type": "string",
+                "description": "The name of your database"
+              },
+              "user": {
+                "type": "string",
+                "description": "The name of a role created in PostgreSQL"
+              },
+              "password": {
+                "type": "string"
+              },
+              "host": {
+                "type": "string"
+              },
+              "port": {
+                "type": "number",
+                "description": "The port on which PostgreSQL instance runs (default to 5454 in development)"
+              },
+              "connectionString": {
+                "type": "string"
+              },
+              "statement_timeout": {
+                "type": "number"
+              },
+              "query_timeout": {
+                "type": "number"
+              },
+              "connectionTimeoutMillis": {
+                "type": "number"
+              },
+            }
+          },
+          "deploy": {
+            "type": "object",
+            "properties": {
+              "client": {
+                "type": "object"
+              },
+              "server": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "default",
+      "database": "taski.app_react",
+      "username": "",
+      "password": ""
+    }
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
