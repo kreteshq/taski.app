@@ -2,6 +2,7 @@ dependencies:
   kretes: 0.78.0_react@17.0.1
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
+  react-hook-form: 6.13.1_react@17.0.1
   react-query: 3.3.2_react-dom@17.0.1+react@17.0.1
 devDependencies:
   '@types/react': 17.0.0
@@ -6092,6 +6093,14 @@ packages:
       react: 17.0.1
     resolution:
       integrity: sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
+  /react-hook-form/6.13.1_react@17.0.1:
+    dependencies:
+      react: 17.0.1
+    dev: false
+    peerDependencies:
+      react: ^16.8.0 || ^17
+    resolution:
+      integrity: sha512-Q0N7MYcbA8SigYufb02h9z97ZKCpIbe62rywOTPsK4Ntvh6fRTGDXSuzWuRhLHhArLoWbGrWYSNSS4tlb+OFXg==
   /react-is/16.13.1:
     dev: false
     resolution:
@@ -7421,6 +7430,7 @@ specifiers:
   prettier: ^2.2.1
   react: ^17.0.1
   react-dom: ^17.0.1
+  react-hook-form: ^6.13.1
   react-query: ^3.3.2
   rollup: ^2.35.1
   tailwindcss: ^2.0.2
