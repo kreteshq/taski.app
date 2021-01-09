@@ -1,4 +1,8 @@
 {
+  "db": {
+    "database": "acme",
+    "user": "zaiste"
+  },
   "deploy": {
     "client": {
       "delete": true,

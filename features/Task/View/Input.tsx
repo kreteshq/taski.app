@@ -14,7 +14,6 @@ const request = (data: Task) =>
 export const TaskInput = ({ }) => {
   const { register, handleSubmit, errors, reset } = useForm<Task>();
 
-  const onSubmit = handleSubmit(data => mutation.mutate(data));
   const queryClient = useQueryClient()
   const mutation = useMutation(request, {
     onMutate: async (task) => {
