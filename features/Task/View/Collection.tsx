@@ -1,6 +1,6 @@
 import React from 'react';
 import { TaskElement } from './Element';
-import { Task } from 'Task/Shape';
+import { Task } from '@features/Task/Shape';
 
 export const TaskCollection = ({ collection = [] }) => {
   return (

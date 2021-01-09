@@ -1,6 +1,9 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { useMutation, useQueryClient } from "react-query";
+
+import { Task } from '@features/Task/Shape';
+
 const request = (data: Task) =>
   fetch('/_api/task', {
     method: 'POST',
@@ -40,7 +43,7 @@ export const TaskInput = ({ }) => {
         />
         <button type="submit" className="shadow text-blue-100 border-blue-100 bg-gray-500 font-semibold py-2 px-4 absolute right-0 mr-2">Add</button>
       </form>
-      <div>{errors.task && <span>This field is required</span>}</div>
+      <div>{errors.name && <span>This field is required</span>}</div>
     </div>
   );
 }

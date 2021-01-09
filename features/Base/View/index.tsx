@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 
-import { TaskCollection, TaskInput } from 'Task/View';
+import { TaskCollection, TaskInput } from '@features/Task/View';
 
 const toJSON = _ => _.json();
 const request = () => fetch('/_api/task').then(toJSON);
