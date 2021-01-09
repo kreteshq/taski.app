@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { useMutation } from "react-query";
+import { useMutation, useQueryClient } from "react-query";
 const request = (data: Task) =>
   fetch('/_api/task', {
     method: 'POST',
@@ -14,8 +14,16 @@ const request = (data: Task) =>
 export const TaskInput = ({ }) => {
   const { register, handleSubmit, errors } = useForm();
 
-  const mutation = useMutation(request);
   const onSubmit = handleSubmit(data => mutation.mutate(data));
+  const queryClient = useQueryClient()
+  const mutation = useMutation(request, {
+    onMutate: async (task) => {
+      await queryClient.cancelQueries('tasks')
+      const previousTodos = queryClient.getQueryData<Task[]>('tasks')
+      queryClient.setQueryData<Task[]>('tasks', collection => [...(collection as Task[]), task])
+      return { previousTodos }
+    },
+  });
 
   return (
     <div className="mb-8">
