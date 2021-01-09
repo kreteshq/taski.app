@@ -3,7 +3,8 @@ import { useQuery } from 'react-query';
 
 import { TaskCollection, TaskInput } from 'Task/View';
 
-const request = () => fetch('/task').then(response => response.json());
+const toJSON = _ => _.json();
+const request = () => fetch('/_api/task').then(toJSON);
 
 const Container = ({ children }) =>
   <div className="max-w-2xl mx-auto">{children}</div>
