@@ -6,7 +6,11 @@ import { TaskCollection, TaskInput } from '@features/Task/View';
 const toJSON = _ => _.json();
 const request = () => fetch('/_api/task').then(toJSON);
 
-const Container = ({ children }) =>
+interface Children {
+  children: React.ReactNode;
+}
+
+const Container = ({ children }: Children) =>
   <div className="max-w-2xl mx-auto">{children}</div>
 
 function App() {
