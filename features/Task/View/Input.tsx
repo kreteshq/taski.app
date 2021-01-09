@@ -12,7 +12,7 @@ const request = (data: Task) =>
 
 
 export const TaskInput = ({ }) => {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors, reset } = useForm<Task>();
 
   const onSubmit = handleSubmit(data => mutation.mutate(data));
   const queryClient = useQueryClient()
@@ -24,12 +24,16 @@ export const TaskInput = ({ }) => {
       return { previousTodos }
     },
   });
+  const onSubmit = handleSubmit(data => {
+    mutation.mutate(data)
+    reset();
+  });
 
   return (
     <div className="mb-8">
       <form className="flex items-center justify-between relative" onSubmit={onSubmit}>
         <input
-          name="task"
+          name="name"
           ref={register({ required: true })}
           placeholder="Add new item..."
           type="text"
