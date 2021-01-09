@@ -1,9 +1,21 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { useMutation } from "react-query";
+const request = (data: Task) =>
+  fetch('/_api/task', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data),
+  })
+
 
 export const TaskInput = ({ }) => {
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = handleSubmit(data => console.log(data))
+
+  const mutation = useMutation(request);
+  const onSubmit = handleSubmit(data => mutation.mutate(data));
 
   return (
     <div className="mb-8">
