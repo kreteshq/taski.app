@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const TaskElement = ({ name }) => {
+export const TaskElement: React.FC<{ name: string }> = ({ name }) => {
   return (
     <li className="bg-white shadow mb-2">
       <label className="flex justify-start items-center p-4">

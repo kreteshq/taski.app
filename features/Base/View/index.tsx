@@ -2,16 +2,13 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { Link, Route, Switch } from "wouter";
 
-import { TaskCollection, TaskInput } from '@features/Task/View';
+import { TaskCollection, TaskInput } from '@/Task/View';
+import { Task } from '@/Task/Shape';
 
 const toJSON = (response: Response) => response.json();
 const request = () => fetch('/_api/task').then(toJSON);
 
-interface Children {
-  children: React.ReactNode;
-}
-
-const Container = ({ children }: Children) =>
+const Container: React.FC<{}> = ({ children }) =>
   <div className="h-screen flex overflow-hidden bg-gray-50">
     <div className="hidden lg:flex lg:flex-shrink-0">
       <div className="flex flex-col w-64 border-r border-gray-200 pt-5 pb-4 bg-gray-100">
@@ -43,9 +40,10 @@ const Container = ({ children }: Children) =>
     </div>
   </div>
 
-function App() {
-  const { data, isLoading, error } = useQuery<any, Error>('tasks', request);
+const App: React.FC<{}> = () => {
+  const { data, isLoading, error } = useQuery<Task[], Error>('tasks', request);
 
+  if (!data) return <div></div>
   if (isLoading) return <div>Loading...</div>
   if (error) return <div>Error: {error.message}</div>
 
