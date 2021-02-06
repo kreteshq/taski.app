@@ -1,6 +1,7 @@
 import React from 'react';
-import { TaskElement } from './Element';
-import { Task } from '@/Task/Shape';
+
+import { TaskElement } from '@/components';
+import { Task } from '@/types';
 
 export const TaskCollection: React.FC<{ collection: Task[] }> = ({ collection = [] }) => {
   return (
