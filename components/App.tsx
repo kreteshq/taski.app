@@ -48,7 +48,7 @@ const Container: React.FC<{}> = ({ children }) =>
     </div>
   </div>
 
-const App: React.FC<{}> = () => {
+export const App: React.FC<{}> = () => {
   const { data, isLoading, error } = useQuery<Task[], Error>('tasks', request);
 
   if (!data) return <div></div>
@@ -73,5 +73,3 @@ const App: React.FC<{}> = () => {
     </Container>
   );
 }
-
-export { App };
