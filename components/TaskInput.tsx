@@ -1,18 +1,11 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { useMutation, useQueryClient } from "react-query";
+import * as http from 'kretes/http';
 
 import { Task } from '@/types';
 
-const request = (data: Task) =>
-  fetch('/_api/task', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data),
-  })
-
+const request = (data: Task) => http.POST('/_api/task', data);
 
 export const TaskInput = ({ }) => {
   const { register, handleSubmit, errors, reset } = useForm<Task>();

@@ -2,11 +2,12 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { Link, Route, Switch } from "wouter";
 
+import * as http from 'kretes/http';
+
 import { TaskCollection, TaskInput } from '@/components';
 import { Task } from '@/types';
 
-const toJSON = (response: Response) => response.json();
-const request = () => fetch('/_api/task').then(toJSON);
+const request = () => http.GET('/_api/task');
 
 const Container: React.FC<{}> = ({ children }) =>
   <div className="h-screen flex overflow-hidden bg-gray-50">
