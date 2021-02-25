@@ -7,11 +7,11 @@
     "start": "kretes start --production"
   },
   "dependencies": {
-    "kretes": "^1.0.0-alpha.9",
+    "kretes": "^1.0.0-alpha.17",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-hook-form": "^6.15.1",
-    "react-query": "^3.8.2",
+    "react-hook-form": "^6.15.4",
+    "react-query": "^3.12.0",
     "wouter": "^2.7.3"
   },
   "browserslist": [
@@ -20,19 +20,19 @@
     "not ie <= 8"
   ],
   "devDependencies": {
-    "@types/react": "^17.0.1",
-    "@types/react-dom": "^17.0.0",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
     "@wessberg/rollup-plugin-ts": "^1.3.8",
     "autoprefixer": "^10.2.4",
     "chokidar": "^3.5.1",
     "cross-env": "^7.0.3",
     "node-pg-migrate": "^5.9.0",
-    "npm-check-updates": "^11.1.1",
-    "pnpm": "5.17.1",
+    "npm-check-updates": "^11.1.9",
+    "pnpm": "5.17.3",
     "postcss": "^8.2.6",
     "prettier": "^2.2.1",
-    "rollup": "^2.38.5",
+    "rollup": "^2.39.1",
     "tailwindcss": "^2.0.3",
-    "typescript": "^4.1.5"
+    "typescript": "^4.2.2"
   }
 }
