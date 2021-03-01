@@ -17,11 +17,6 @@
     "paths": {
       "@/*": [
         "*"
-      ],
-      "/modules/*.js": [
-        "node_modules/@types/*",
-        "node_modules/*",
-        "modules/*.js"
       ]
     },
     "esModuleInterop": true,
@@ -32,8 +27,8 @@
   "include": [
     "*.ts",
     "*.tsx",
-    "../../features/**/View/*.ts",
-    "../../features/**/View/*.vue"
+    "../../components/**/*.ts",
+    "../../components/**/*.tsx",
   ],
   "exclude": [
     "node_modules"
