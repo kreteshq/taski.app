@@ -2,6 +2,7 @@
   "files.exclude": {
     "dist": false
   },
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "search.exclude": {
     "dist": true
   },
