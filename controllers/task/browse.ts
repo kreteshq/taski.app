@@ -1,9 +1,8 @@
-import { Handler, response, database as db } from 'kretes';
-
-const { OK } = response;
+import { Handler, database as db } from 'kretes';
+import { OK } from 'kretes/response';
 
 export const browse: Handler = async ({ }) => {
   const collection = await db.from('task');
-  return OK(collection);
+  return OK([...collection, { name: 'bang'}]);
 }
 

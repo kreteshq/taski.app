@@ -1,6 +1,5 @@
-import { Handler, response, database as db } from 'kretes';
-
-const { OK } = response;
+import { Handler, database as db } from 'kretes';
+import { OK } from 'kretes/response';
 
 export const create: Handler = async ({ params }) => {
   const { name } = params;

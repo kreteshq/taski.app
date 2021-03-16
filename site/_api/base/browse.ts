@@ -1,13 +1,13 @@
-import { Handler, response, Middleware, Pipeline, request } from 'kretes';
+import { Handler, Middleware, Pipeline } from 'kretes';
+import { validation } from 'kretes/request';
+import { OK } from 'kretes/response';
+import { authenticate } from 'kretes/auth';
 
-const { validate } = request;
-const { OK } = response;
-
-const validator: Middleware = validate({ 
+const validate: Middleware = validation({
   name: { 
     type: String, 
     required: true, 
-    length: { min: 3, max: 5 } 
+    length: { min: 3, max: 5 }
   }
 })
 
@@ -23,4 +23,9 @@ const handler: Handler = async (request) => {
   return OK('X');
 }
 
-export const browse: Pipeline = [validator, something, handler]
+export const browse: Pipeline = [
+  authenticate,
+  validate,
+  // something,
+  handler
+]
