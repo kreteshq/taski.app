@@ -1,7 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { Link, Route, Switch } from "wouter";
-
 import * as http from 'kretes/http';
 
 import { TaskCollection, TaskInput } from '@/components';
