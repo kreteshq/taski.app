@@ -1,23 +1,21 @@
-# README
+<h1 align="center">Taski.app</h1>
 
-## Getting Started
+<p align="center">A yet another task manager to show how to create full-stack apps in TypeScript</p>
 
-### Using VS Code (Recommended)
+<p align="center">
+  <img src="/static/taskiapp.png">
+</p>
 
-Use the `Start` command from <kbd>Tasks: Run Task</kbd> in menu in the command palette.
+My plan is to create a fully featured task management application. I won't be able to do it alone though. Your help is welcome!
 
-> It is a good idea to bind CTRL-T to Tasks: Run Task for convenience.
+This application is built with Node.js, React.js, Tailwind CSS and Kretes. 
 
-![Kretes Start](https://kretes.dev/images/external/kretes-readme.gif)
-
-To start debugging in VSCode select one of the configurations in Run and Debug menu or select <kbd>Debug: Start Debugging</kbd> in Command Palette.
-
-### Using CLI
+## Installation 
 
 Install dependencies
 
 ```
-pnpm install
+kretes install
 ```
 
 Start the application:
