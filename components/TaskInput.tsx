@@ -8,7 +8,7 @@ import { Task } from '@/types';
 const request = (data: Task) => http.POST('/_api/task', data);
 
 export const TaskInput = ({ }) => {
-  const { register, handleSubmit, errors, reset } = useForm<Task>();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<Task>();
 
   const queryClient = useQueryClient()
   const mutation = useMutation(request, {
@@ -28,8 +28,7 @@ export const TaskInput = ({ }) => {
     <div className="mb-8">
       <form className="flex items-center justify-between relative" onSubmit={onSubmit}>
         <input
-          name="name"
-          ref={register({ required: true })}
+          {...register("name", { required: true })}
           placeholder="Add new item..."
           type="text"
           className="p-4 pr-20 border-l-4 border-gray-500 bg-gray-200 w-full shadow-inner outline-none"
