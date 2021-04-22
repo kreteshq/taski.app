@@ -8,7 +8,7 @@ specifiers:
   autoprefixer: ^10.2.5
   chokidar: ^3.5.1
   cross-env: ^7.0.3
-  kretes: ^1.0.0-alpha.39
+  kretes: ^1.0.0-alpha.40
   kretes-snowpack-refresh: ^0.0.3
   node-pg-migrate: ^5.9.0
   npm-check-updates: ^11.5.1
@@ -24,7 +24,7 @@ specifiers:
   wouter: ^2.7.4
 
 dependencies:
-  kretes: 1.0.0-alpha.39_react@17.0.2
+  kretes: 1.0.0-alpha.40_react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-hook-form: 7.2.2_react@17.0.2
@@ -613,6 +613,10 @@ packages:
 
   /@graphile-contrib/pg-simplify-inflector/6.1.0:
     resolution: {integrity: sha512-3eI2FP4ulu/fxwkJBNXhR6XEzqVz4wJWFr4LfeyUNNArUtLFx0DpP6YdcARCYgwLExFcIQNE8fnul3JKiciYIw==}
+    dev: false
+
+  /@graphile/logger/0.2.0:
+    resolution: {integrity: sha512-jjcWBokl9eb1gVJ85QmoaQ73CQ52xAaOCF29ukRbYNl6lY+ts0ErTaDYOBlejcbUs2OpaiqYLO5uDhyLFzWw4w==}
     dev: false
 
   /@graphile/lru/4.11.0:
@@ -1346,8 +1350,8 @@ packages:
   /abbrev/1.1.1:
     resolution: {integrity: sha512-nne9/IiQ/hzIhY6pdDnbBtz7DjPTKrY00P/zvPSm5pOFkl6xuGrGnXn/VtTNNfNtAfZ9/1RtehkszU9qcTii0Q==}
 
-  /abstract-syntax-tree/2.17.3:
-    resolution: {integrity: sha512-5+0RvADDsjXYRVmfBjTYAuf9/OoYRIaUGgccTnyR1F+T/gFl8zYSEpHUaRfF4TLEAOYoOQttOvtykIoS2tZCKQ==}
+  /abstract-syntax-tree/2.17.4:
+    resolution: {integrity: sha512-DuDJ74mnrbxya+ifV/sjhZJgErJ2PjW6qUcZmTaNZ3ASAS0kOYuZ+iH59UgBc4idx9bMrdWxCECPRNGZKrcgDg==}
     engines: {node: '>=12.20.1'}
     dependencies:
       ast-types: 0.14.2
@@ -1686,7 +1690,7 @@ packages:
     dependencies:
       '@rollup/plugin-commonjs': 18.0.0_rollup@2.45.2
       '@rollup/plugin-node-resolve': 11.2.1_rollup@2.45.2
-      abstract-syntax-tree: 2.17.3
+      abstract-syntax-tree: 2.17.4
       axios: 0.21.1_debug@4.3.1
       axios-extensions: 3.1.3_axios@0.21.1
       css-tree: 1.1.3
@@ -2848,11 +2852,12 @@ packages:
       - supports-color
     dev: false
 
-  /graphile-worker/0.10.0:
-    resolution: {integrity: sha512-TGIBXb6SZYoyGgPXwsQZkOxIaLUoxkwtrttFDe6mXZhkx20mLU4La3OrmP0lJQ6T63eXu0m5Knj/A26ECZ77hw==}
+  /graphile-worker/0.11.0:
+    resolution: {integrity: sha512-t3GHGQnafZEWNgBoPaAs0FcR4n4V9uGIY+OlmgBtVl+3zHwC80yBcjW0/yMuCGhOvdiC7Yw9MYlPXcodlypGYA==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     dependencies:
+      '@graphile/logger': 0.2.0
       '@types/debug': 4.1.5
       '@types/pg': 7.14.11
       chokidar: 3.5.1
@@ -3499,8 +3504,8 @@ packages:
       tailwindcss: 2.1.1_02ae6d0a5709fa7b5d38be2fad8eebc6
     dev: true
 
-  /kretes/1.0.0-alpha.39_react@17.0.2:
-    resolution: {integrity: sha512-yv5hbNzno8OGfOV9f+RAEfJKP+NejA5+55/Ho+cd9+mHxwXOK+QQldnIxjUQRG/cru13oC0CmLtL9R0Svu2bZA==}
+  /kretes/1.0.0-alpha.40_react@17.0.2:
+    resolution: {integrity: sha512-CEsGCHfaS4mMRkOrp+uMs2iVDghEjAN+wtGGX/eSpAfQmp9d/+E7qNWH78FjMeM6qNDEUwKuKEmo+teTZkrZjg==}
     engines: {node: '>= 12'}
     hasBin: true
     dependencies:
@@ -3525,7 +3530,7 @@ packages:
       fast-glob: 3.2.5
       fs-extra: 9.1.0
       graphile-utils: 4.11.2
-      graphile-worker: 0.10.0
+      graphile-worker: 0.11.0
       graphql: 15.5.0
       graphql-tag: 2.11.0_graphql@15.5.0
       graphql-tools: 7.0.4_graphql@15.5.0+react@17.0.2
@@ -3535,10 +3540,10 @@ packages:
       pg: 8.6.0
       postcss: 8.2.10
       postgraphile: 4.11.0
-      retes: 0.14.0
+      retes: 0.15.0
       rsyncwrapper: 3.0.1
       semver: 7.3.5
-      snowpack: 3.3.3
+      snowpack: 3.3.5
       stack-trace: 0.0.10
       typescript: 4.2.4
       validate: 5.1.0
@@ -4812,7 +4817,7 @@ packages:
     engines: {node: '>= 6'}
     dependencies:
       inherits: 2.0.4
-      string_decoder: 1.3.0
+      string_decoder: 1.1.1
       util-deprecate: 1.0.2
     dev: false
 
@@ -4957,8 +4962,8 @@ packages:
       lowercase-keys: 1.0.1
     dev: true
 
-  /retes/0.14.0:
-    resolution: {integrity: sha512-YqJ7t/vrQqBTK883Xi/3lLlyhW1fv8Egnx+3k6uU5TF8KxyORj5Rxcj4vCPM0ytUqcYm7eNtJuChhdkcSUdHfw==}
+  /retes/0.15.0:
+    resolution: {integrity: sha512-Zzct2jbM5yvuf7gpb1c8f2YOxn5CAmDNKtTSfG5A5tIh2IZuzO5ofLEZi6KMNJxB5BL5V3aOFRWWQOjMkysXpA==}
     dependencies:
       busboy: 0.3.1
       debug: 4.3.1
@@ -5106,8 +5111,8 @@ packages:
     resolution: {integrity: sha512-iVICrxOzCynf/SNaBQCw34eM9jROU/s5rzIhpOvzhzuYHfJR/DhZfDkXiZSgKXfgv26HT3Yni3AV/DGw0cGnnw==}
     engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
 
-  /snowpack/3.3.3:
-    resolution: {integrity: sha512-ASPyveGfzAbhyp1k5XmLtZoS0J6PpY8jArGm6JLM8ztuB4AWA2z1Qg/QiTOIguOhZN0QKKUe6slkYfSWteIzFA==}
+  /snowpack/3.3.5:
+    resolution: {integrity: sha512-QI6/PcSud39ZAmrs7IiBSCr3PWXxc4/w2SNJp32+n7XsXxSB4waJ+jpG5rtJAeif5pqRNkX4887PKwWsMzFRCw==}
     engines: {node: '>=10.19.0'}
     hasBin: true
     dependencies:
@@ -5248,12 +5253,6 @@ packages:
     resolution: {integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==}
     dependencies:
       safe-buffer: 5.1.2
-
-  /string_decoder/1.3.0:
-    resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
-    dependencies:
-      safe-buffer: 5.2.1
-    dev: false
 
   /strip-ansi/3.0.1:
     resolution: {integrity: sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8=}
