@@ -16,7 +16,7 @@
     "moduleResolution": "node",
     "paths": {
       "@/*": [
-        "*"
+        "app/*"
       ]
     },
     "esModuleInterop": true,
@@ -27,8 +27,8 @@
   "include": [
     "*.ts",
     "*.tsx",
-    "../../components/**/*.ts",
-    "../../components/**/*.tsx",
+    "../../app/components/**/*.ts",
+    "../../app/components/**/*.tsx",
   ],
   "exclude": [
     "node_modules"
