@@ -22,9 +22,10 @@
     "sourceMap": true
   },
   "include": [
-    "*.ts",
     "../../app/tasks/*.ts",
     "../../app/controllers/**/*.ts",
+    "../../app/routes/**/*.ts",
+    "../../app/middlewares/**/*.ts",
     "../../site/_api/**/*.ts",
   ]
 }
