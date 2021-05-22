@@ -79,6 +79,9 @@
               },
             }
           },
+          "graphql": {
+            "type": "boolean"
+          },
           "deploy": {
             "type": "object",
             "properties": {
