@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Taski App - A Task Management App Example in Kretes</title>
+  <meta name="description" content="A task Management app example in Kretes">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+
+<body class="bg-gray-50">
+  <div id="app">{ app | unescape }</div>
+  <div id="state" style="display:none">{ dehydratedState | json }</div>
+  <script>
+    window.__REACT_QUERY_STATE__ = JSON.parse(document.getElementById("state").textContent);
+  </script>
+  <script type="module" src="/app.js"></script>
+</body>
+
+</html>

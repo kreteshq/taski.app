@@ -3,7 +3,8 @@ import { useQuery } from 'react-query';
 import { Link, Route, Switch } from "wouter";
 import * as http from 'kretes/http';
 
-import { TaskCollection, TaskInput } from '@/components';
+import { TaskInput } from '@/components/TaskInput';
+import { TaskCollection } from '@/components/TaskCollection';
 import { Task } from '@/types';
 
 const request = () => http.GET('/_api/task');
