@@ -7,11 +7,11 @@
     "start": "kretes start --production"
   },
   "dependencies": {
-    "kretes": "^1.0.0-alpha.44",
+    "kretes": "^1.0.0-alpha.51",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^7.4.1",
-    "react-query": "^3.15.2",
+    "react-hook-form": "^7.6.4",
+    "react-query": "^3.16.0",
     "wouter": "^2.7.4"
   },
   "browserslist": [
@@ -20,19 +20,19 @@
     "not ie <= 8"
   ],
   "devDependencies": {
-    "@snowpack/plugin-postcss": "^1.2.2",
+    "@snowpack/plugin-postcss": "^1.4.0",
     "@tailwindcss/jit": "^0.1.18",
-    "@types/react": "^17.0.5",
-    "@types/react-dom": "^17.0.3",
+    "@types/react": "^17.0.6",
+    "@types/react-dom": "^17.0.5",
     "autoprefixer": "^10.2.5",
     "chokidar": "^3.5.1",
     "cross-env": "^7.0.3",
     "kretes-snowpack-refresh": "^0.0.3",
     "node-pg-migrate": "^5.9.0",
-    "npm-check-updates": "^11.5.10",
-    "pnpm": "6.2.5",
-    "postcss": "^8.2.14",
-    "prettier": "^2.2.1",
+    "npm-check-updates": "^11.5.13",
+    "pnpm": "6.4.0",
+    "postcss": "^8.3.0",
+    "prettier": "^2.3.0",
     "tailwindcss": "^2.1.2",
     "typescript": "^4.2.4"
   }
